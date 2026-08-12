@@ -121,7 +121,7 @@ bash run.sh
 ```text
 请先完整读取项目根目录的 coder.md，并严格执行“1.1 仓库初始化”。本轮只做这一项操作。
 
-保留现有文件和用户改动。只使用 coder.md“1.1.1 Conda相关”中由我填写的 Conda 环境名；如果仍为 [TBD]，先请我填写。环境安装遵循该节规则，Git 和 .gitignore 遵循“1.1.2 Git相关”。完成检查和必要验证后，及时提交本操作中未被忽略的项目文件更新，默认不 push。
+保留现有文件和用户改动。只使用 coder.md“1.1.1 Conda相关”中由我填写的 Conda 环境名；如果仍为 [TBD]，先请我填写。环境安装遵循该节规则；安装 pip 包时使用 `pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple some-package`，并将 `some-package` 替换为实际包名。Git 和 .gitignore 遵循“1.1.2 Git相关”。完成检查和必要验证后，及时提交本操作中未被忽略的项目文件更新，默认不 push。
 
 【补充信息（格式自由，可留空）】
 在这里填写初始化目标、依赖、硬件、上游仓库、验证要求或任何其他信息。

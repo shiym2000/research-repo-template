@@ -28,7 +28,13 @@ Conda环境名：[TBD]
 - 该字段由用户在具体项目的 `coder.md` 中手动填写，是当前项目 Conda 环境名的唯一来源。Agent 不从 prompt、目录名或现有环境自行改名或另选环境。
 - 若仍为 `[TBD]`，任何需要创建、安装或使用环境的操作都应先请用户填写。
 - 创建、更新和运行实验都使用该环境。`environment.yml` 的 `name` 应与此处一致；依赖变化同步更新可复现的依赖声明。
-- 使用清华 PyPI 镜像安装 pip 包，只对本次安装命令指定镜像，不永久修改用户级 pip/Conda 配置。需要官方源的特殊依赖按其兼容要求安装。
+- 使用清华 PyPI 镜像安装 pip 包，标准命令如下，其中 `some-package` 替换为实际包名：
+
+  ```bash
+  pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple some-package
+  ```
+
+  只对本次安装命令指定镜像，不永久修改用户级 pip/Conda 配置。需要官方源的特殊依赖按其兼容要求安装。
 - 在 tmux 或脚本中使用精确环境名运行，例如 `conda run -n <Conda环境名> ...`；环境不可用时停止，不回退到 `base` 或其他环境。
 - 安装完成后运行必要的导入检查、测试或 smoke test，并记录实际 Python、核心依赖和 CUDA 信息。
 
